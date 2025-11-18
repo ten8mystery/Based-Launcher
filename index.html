@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Launcher (Web)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="launcher">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2 class="logo">Minecraft</h2>
+        <div class="menu">
+            <a class="menu-item active" id="playTab">Play</a>
+            <a class="menu-item" id="installationsBtn">Installations</a>
+            <a class="menu-item" id="patchNotesBtn">Patch Notes</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <div class="banner">
+            <img src="A_screenshot_of_the_Minecraft_Launcher_application.png" alt="Banner">
+            <div class="banner-overlay"></div>
+        </div>
+
+        <!-- Version Selector -->
+        <div class="version-box" id="versionBox">
+            <label for="version">Version:</label>
+            <select id="version">
+                <option>Newest (1.12.2)</option>
+                <option>1.8.8</option>
+                <option>1.5.2</option>
+            </select>
+        </div>
+
+        <!-- Play Button -->
+        <button id="playBtn" class="play-btn">PLAY</button>
+
+        <!-- NEWS PANEL -->
+        <div class="news-panel" id="newsPanel">
+            <h3>Latest News</h3>
+
+            <div class="news-item">
+                <b>• Snapshot 25w01a Released</b><br>
+                Small fixes and technical changes.
+            </div>
+
+            <div class="news-item">
+                <b>• Bedrock Patch Incoming</b><br>
+                Performance improvements rolling out.
+            </div>
+
+            <div class="news-item">
+                <b>• Marketplace Sale</b><br>
+                Discounts all week on popular packs.
+            </div>
+        </div>
+
+        <!-- PATCH NOTES PANEL (hidden until clicked) -->
+        <div class="news-panel" id="patchNotesPanel" style="display:none;">
+            <h3>Update Log</h3>
+
+            <div class="news-item">
+                <b>Minecraft 1.12.2</b><br>
+                • Stability fixes<br>
+                • Updated libraries<br>
+                • Minor bug patches
+            </div>
+
+            <div class="news-item">
+                <b>Minecraft 1.8.8</b><br>
+                • Improved server authentication<br>
+                • Client performance improved<br>
+                • Security adjustments
+            </div>
+
+            <div class="news-item">
+                <b>Minecraft 1.5.2</b><br>
+                • Redstone stability fixes<br>
+                • Launcher reliability fixes<br>
+                • Texture bug resolved
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Coming Soon Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p>Coming Soon</p>
+        <button id="closePopup">OK</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
