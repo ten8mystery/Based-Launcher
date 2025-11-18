@@ -1,4 +1,3 @@
-// Play redirects
 document.getElementById("playBtn").addEventListener("click", () => {
     const version = document.getElementById("version").value;
 
@@ -11,26 +10,6 @@ document.getElementById("playBtn").addEventListener("click", () => {
     window.location.href = redirects[version];
 });
 
-// Coming soon popup for Installations
-const popup = document.getElementById("popup");
-const closePopup = document.getElementById("closePopup");
-
-document.getElementById("installationsBtn").addEventListener("click", () => {
-    popup.style.display = "flex";
-});
-
-closePopup.addEventListener("click", () => {
-    popup.style.display = "none";
-});
-
-// Patch Notes tab — swap panels
-document.getElementById("patchNotesBtn").addEventListener("click", () => {
-    document.getElementById("newsPanel").style.display = "none";
-    document.getElementById("patchNotesPanel").style.display = "block";
-});
-
-// Play tab — show news again
-document.getElementById("playTab").addEventListener("click", () => {
-    document.getElementById("newsPanel").style.display = "block";
-    document.getElementById("patchNotesPanel").style.display = "none";
-});
+function comingSoon() {
+    alert("Coming Soon!");
+}
