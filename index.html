@@ -1,102 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Based Launcher</title>
+    <title>Minecraft Launcher</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="launcher">
+<div class="sidebar">
+    <h2 class="logo">Launcher</h2>
+    <button class="tab selected">Play</button>
+    <button class="tab" onclick="comingSoon()">Installations</button>
+    <a href="patchnotes.html"><button class="tab">Patch Notes</button></a>
+</div>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <h2 class="logo">Based Launcher</h2>
-        <div class="menu">
-            <a class="menu-item active" id="playTab">Play</a>
-            <a class="menu-item" id="installationsBtn">Installations</a>
-            <a class="menu-item" id="patchNotesBtn">Patch Notes</a>
-        </div>
-    </div>
+<div class="main">
+    <h1 class="title">Minecraft: Java Edition</h1>
 
-    <!-- Main Content -->
-    <div class="main">
-
-        <div class="banner">
-            <img src="https://xboxwire.thesourcemediaassets.com/sites/2/2024/05/Hero-8c18da7c19a1a8811ddb.jpg" alt="Banner">
-            <div class="banner-overlay"></div>
-        </div>
-
-        <!-- Version Selector -->
-        <div class="version-box" id="versionBox">
-            <label for="version">Version:</label>
-            <select id="version">
-                <option>Newest (1.12.2)</option>
-                <option>1.8.8</option>
-                <option>1.5.2</option>
-            </select>
-        </div>
-
-        <!-- Play Button -->
+    <div class="version-box">
+        <label>Version:</label>
+        <select id="version">
+            <option>Newest (1.12.2)</option>
+            <option>1.8.8</option>
+            <option>1.5.2</option>
+        </select>
         <button id="playBtn" class="play-btn">PLAY</button>
+    </div>
 
-        <!-- NEWS PANEL -->
-        <div class="news-panel" id="newsPanel">
-            <h3>Latest News</h3>
-
-            <div class="news-item">
-                <b>• Snapshot 25w01a Released</b><br>
-                Small fixes and technical changes.
-            </div>
-
-            <div class="news-item">
-                <b>• Bedrock Patch Incoming</b><br>
-                Performance improvements rolling out.
-            </div>
-
-            <div class="news-item">
-                <b>• Marketplace Sale</b><br>
-                Discounts all week on popular packs.
-            </div>
-        </div>
-
-        <!-- PATCH NOTES PANEL (hidden until clicked) -->
-        <div class="news-panel" id="patchNotesPanel" style="display:none;">
-            <h3>Update Log</h3>
-
-            <div class="news-item">
-                <b>Minecraft 1.12.2</b><br>
-                • Stability fixes<br>
-                • Updated libraries<br>
-                • Minor bug patches
-            </div>
-
-            <div class="news-item">
-                <b>Minecraft 1.8.8</b><br>
-                • Improved server authentication<br>
-                • Client performance improved<br>
-                • Security adjustments
-            </div>
-
-            <div class="news-item">
-                <b>Minecraft 1.5.2</b><br>
-                • Redstone stability fixes<br>
-                • Launcher reliability fixes<br>
-                • Texture bug resolved
-            </div>
-        </div>
-
+    <div class="news-box">
+        <h2>News</h2>
+        <p>- New launcher UI update released.</p>
+        <p>- Added version selection.</p>
+        <p>- Patch notes are now available.</p>
     </div>
 </div>
 
-<!-- Coming Soon Popup -->
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <p>Coming Soon</p>
-        <button id="closePopup">OK</button>
-    </div>
-</div>
+<a href="settings.html" class="settings-btn">⚙ Settings</a>
 
 <script src="script.js"></script>
 </body>
